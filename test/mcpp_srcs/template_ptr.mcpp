@@ -1,0 +1,9 @@
+// Template + pointer deduction — template_ptr.mcpp
+template <typename T>
+T id(T value);
+
+int a = 3;
+int* p = &a;
+
+auto x = id(a);
+auto y = id(p);

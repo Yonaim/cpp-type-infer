@@ -1,0 +1,23 @@
+// Combined showcase — full_showcase.mcpp
+template <typename T>
+T add(T a, T b);
+
+template <typename T>
+T id(T value);
+
+int a = 3;
+double b = 4.2;
+string s = "hello";
+
+auto x = add(a, 2);
+auto y = add(b, 3.1);
+
+int* p = &a;
+auto pa = p;
+auto ra = *p;
+
+decltype(a) da;
+decltype(b + a) db;
+
+auto sid = id(s);
+auto cid = id(a);

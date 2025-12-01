@@ -1,0 +1,12 @@
+// decltype examples — decltype_examples.mcpp
+int a = 3;
+double b = 4.2;
+
+decltype(a) x;
+decltype(b) y;
+decltype(a + b) z;
+
+int* p = &a;
+decltype(*p) r;
+
+decltype((a)) lvalue_ref;

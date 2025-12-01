@@ -1,0 +1,11 @@
+// Pointer & reference deduction — ptr_ref.mcpp
+int a = 3;
+auto x = a;
+
+int* p = &a;
+auto q = p;
+auto r = *p;
+
+int& ref = a;
+auto c = ref;
+auto& d = ref;

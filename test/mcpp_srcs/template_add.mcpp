@@ -1,0 +1,6 @@
+// Template function — template_add.mcpp
+template <typename T>
+T add(T a, T b);
+
+auto x = add(1, 2);
+auto y = add(1.5, 2.1);

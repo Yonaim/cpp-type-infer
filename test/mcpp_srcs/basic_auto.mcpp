@@ -1,0 +1,12 @@
+// Basic auto deduction — basic_auto.mcpp
+auto x = 10;
+auto y = x + 2;
+auto z = y * 3;
+
+auto a = 1.5;
+auto b = a + 2;
+
+print x;
+print y;
+print z;
+print b;

@@ -1,0 +1,11 @@
+// Error cases — errors.mcpp
+auto x = 1 + "hello";
+
+template <typename T>
+T add(T a, T b);
+
+auto y = add(1, 2.0);
+
+auto z = foo + 1;
+
+decltype(1, 2) a;

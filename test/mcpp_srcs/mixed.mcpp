@@ -1,0 +1,7 @@
+// Mixed expressions — mixed.mcpp
+int a = 3;
+double b = 2.5;
+
+auto x = a + b;
+auto y = b + a * 2;
+auto z = (a + 1) * 3;
