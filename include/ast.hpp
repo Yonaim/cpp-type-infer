@@ -89,7 +89,7 @@ enum class StmtKind
     IfStmt,
     WhileStmt,
     ForStmt,
-    CompoundStmt
+    CompoundStmt // 중괄호로 둘러싸인 여러 문장 블록
 };
 
 struct Stmt : ASTNode
@@ -125,18 +125,26 @@ struct DeclStmt : Stmt
 // Expressions (Expr)
 // ============================================================================
 
+/*
+    [Primary expression]
+    1) LiteralExpr (Integer, Double, String)
+    2) DeclRefExpr
+    3) ParenExpr
+    4) CallExpr
+*/
 enum class ExprKind
 {
-    // literal
+    // Primary expression
     IntegerLiteral,
     DoubleLiteral,
     StringLiteral,
-    // non-literal
     DeclRefExpr, // 이미 선언된 변수를 참조 (심볼 테이블에 등록됨)
-    UnaryExpr,   // 단항 연산자 (&, *, -)
-    BinaryExpr,  // 이항 연산자 (+, -, *, /, ==, <...)
     CallExpr,    // 함수 호출
     ParenExpr,   // 괄호로 묶은 표현식
+
+    // Operator Expressions
+    UnaryExpr,  // 단항 연산자 (&, *, -)
+    BinaryExpr, // 이항 연산자 (+, -, *, /, ==, <...)
 };
 
 enum class UnaryOp
